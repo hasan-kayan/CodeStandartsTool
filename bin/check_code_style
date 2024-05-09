@@ -1,0 +1,8 @@
+# This allows the script to be executable and also usable as a module.
+from code_style_checker.checker import main
+
+def run():
+    main()
+
+if __name__ == "__main__":
+    run()
