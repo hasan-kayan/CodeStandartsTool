@@ -6,6 +6,16 @@ import os
 from typing import List, Dict
 
 def file_name_checker(language: str) -> List[Dict[str, str]]:
+    """
+    Check the file names in the 'project' directory against the specified language's file naming rules.
+
+    Args:
+        language (str): The language for which the file names should be checked.
+
+    Returns:
+        List[Dict[str, str]]: A list of dictionaries containing the file names and their status (pass/fail).
+
+    """
     result = []
     with open(f'code-style-checker/{language}.json') as f:
         data = json.load(f)
